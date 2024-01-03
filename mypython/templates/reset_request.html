@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <!-- This is for the Form Section For Reset request-->
+    <main class="form-signin">
+        <form method="POST" action="">
+            <img class="mb-4" src="{{ url_for('static', filename='logo.svg')}}" alt="" width="72" height="57">
+            <h1 class="h3 mb-3 fw-normal">Reset Password</h1>
+            {{ form.hidden_tag() }}
+
+            <div class="form-group">
+                {{ form.email.label(class="form-control-label") }}
+                {% if form.email.errors %}
+                    {{ form.email(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.email(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+            <div class="form-group">
+                {{ form.submit(class="w-100 btn btn-lg btn-primary mt-3") }}
+            </div>
+        </form>
+    </main>
+
+{% endblock %}

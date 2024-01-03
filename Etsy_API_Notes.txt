@@ -1,0 +1,49 @@
+- Check status of app and get key details
+    https://www.etsy.com/developers/your-apps
+
+====================================
+
+* The Etsy APi requires Node.js (Already installed)
+
+- First I will be using several npm packages for this test. Started by creating a new file in my etsyapp directory called package.json. and pasted the following code in the file and save it.
+
+***************
+{
+  "name": "etsyapp",
+  "version": "0.0.1",
+  "description": "A simple Node app that makes requests to Etsy’s Open API.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "4.x",
+    "hbs": "^4.1.2",
+    "node-fetch": "^2.6.1"
+  },
+  "engines": {
+    "node": ">=12 <15"
+  },
+  "license": "MIT"
+}
+
+***************
+
+- then I ran  npm install.
+- I then created a file called server.js
+   > touch server.js
+- vim server.js and pasted a sample code to start a simple web server on port 3003
+- then I ran the following command to start the server 
+  > node server.js
+  * and it worked fine. and printed message "Hello, work!"
+
+========================================
+
+* Next we Test our API key
+
+- updated server.js and updated code to make get request to ping endpoint which does not require authentication scopes — and print the response to the console
+- after testing was not able to get the key as my app is still in pending state.
+
+
+*** stored at "Test your API key"
+https://developers.etsy.com/documentation/tutorials/quickstart#:~:text=the%20web%20page.-,Test%20your%20API%20key,-%23

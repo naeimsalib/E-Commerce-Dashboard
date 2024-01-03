@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{%block content%}
+<head>
+
+    <!-- Bootstrap CSS link
+    <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+     Styles for the boarders around each section of the FAQ Page
+         -->
+    <style>
+
+        .faq-section {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .answer {
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Frequently Asked Questions (FAQ)</h2>
+
+        <!-- General Questions -->
+        <div class="faq-section">
+            <h3>General Questions</h3>
+            <div class="question">1. What is [Your Company/Service] about?</div>
+            <div class="answer">Welcome to [Your Company Name], where we empower entrepreneurs and businesses with the seamless integration of multiple Etsy and Shopify stores. Our platform allows you to effortlessly connect and monitor all your sales, orders, and products from these platforms in one centralized hub. Streamline your e-commerce operations, gain valuable insights, and take your business to new heights with the simplicity and efficiency of [Your Company Name].</div>
+
+            <div class="question">2. How do I get started?</div>
+            <div class="answer">Embark on your e-commerce journey by signing up for a complimentary account. Our free plan enables you to seamlessly connect one Etsy store and one Shopify store, granting you access to our comprehensive monitoring features. Explore further with our premium plans, accommodating up to 5 stores each, or elevate your experience with the enterprise plan, allowing the connection of an unlimited number of stores. Join us in simplifying and enhancing your online business operations.            </div>
+        </div>
+
+        <!-- Account and Settings -->
+        <div class="faq-section">
+            <h3>Account and Settings</h3>
+            <div class="question">3. How can I reset my password?</div>
+            <div class="answer">
+                Visit the sign-in page and select the "Forgot Password" link. Follow the prompts to enter your email, and you'll receive a link via email to set your new password.
+            <div class="question">4. Can I update my account information?</div>
+            <div class="answer">Effortlessly update your information by navigating to your account settings</div>
+        </div>
+
+        <!-- Product/Service Specific -->
+        <div class="faq-section">
+            <h3>Product/Service Specific</h3>
+            <div class="question">5. What features does [Product/Service] offer?</div>
+            <div class="answer">[Overview of key features.]</div>
+
+            <div class="question">6. Is there a free trial available?</div>
+            <div class="answer">[Information on any trial period.]</div>
+        </div>
+
+        <!-- Support and Contact -->
+        <div class="faq-section">
+            <h3>Support and Contact</h3>
+            <div class="question">7. How can I reach customer support?</div>
+            <div class="answer">[Contact options and support hours.]</div>
+
+            <div class="question">8. Is there a community forum?</div>
+            <div class="answer">[Details about any user community or forum.]</div>
+        </div>
+
+        <!-- Billing and Payments -->
+        <div class="faq-section">
+            <h3>Billing and Payments</h3>
+            <div class="question">9. How do I update my payment information?</div>
+            <div class="answer">[Instructions for updating payment details.]</div>
+
+            <div class="question">10. What payment methods do you accept?</div>
+            <div class="answer">[List of accepted payment methods.]</div>
+        </div>
+    </div>
+</body>
+{% endblock %}

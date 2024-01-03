@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{%block content%}
+<main class="form-signin">
+<div class = "content-section">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <img class="mb-4" src="{{ url_for('static',filename='logo.svg')}}" alt="Image Is Not Found" width="72" height="57">
+            <legend class="h3 mb-3 fw-normal">Account Info</legend>
+            <div class="form-group">
+                {{ form.firstname.label(class="form-control-label") }}
+
+                {% if form.firstname.errors %}
+                    {{ form.firstname(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.firstname.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.firstname(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+            <div class="form-group">
+                {{ form.lastname.label(class="form-control-label") }}
+                {{ form.lastname(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.email.label(class="form-control-label") }}
+                {% if form.email.errors %}
+                    {{ form.email(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.email(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit(class="w-100 btn btn-lg btn-primary mt-3") }}
+        </div>
+    </form>
+</div>
+</main>
+{% endblock %}
